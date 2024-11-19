@@ -15,6 +15,7 @@ const help_s: &str = "
 3.Delete student info
 4.Query student infomation
 5.Modify student info
+6.Student length
 ------------------------
 0.exit
 
@@ -94,6 +95,11 @@ fn main() -> Result<(), Box<dyn Error>> {
                         eprintln!("{}", format!("{}", e).red().bold());
                     }
                 }
+            }
+            // Print length
+            6=>{
+                let length=student_map.len();
+                println!("Student length is {}",format!("{}",length).green().bold())
             }
             // Exit this application
             0 => {
